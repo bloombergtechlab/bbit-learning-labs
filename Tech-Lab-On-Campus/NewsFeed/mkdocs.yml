@@ -11,4 +11,7 @@ nav:
     - React Basics: resources/react-basics.md
     - Python Basics: resources/python-basics.md
     - Docker Basics: resources/docker-basics.md
+    - HTML Basics: resources/html-basics.md
+    - React Basics: resources/react-basics.md
+    - NextJs Basics: resources/next-js-basics.md
 theme: readthedocs
