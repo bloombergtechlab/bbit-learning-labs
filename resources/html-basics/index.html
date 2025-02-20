@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>HTML Basics - Bloomberg Tech Lab</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "HTML Basics";
+        var mkdocs_page_input_path = "resources/html-basics.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Bloomberg Tech Lab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../backend/">Backend</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../frontend/">Frontend</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../api-question-prompt/">Interview Question Prompt</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Resources</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../resources/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis-basics/">Redis Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../git-basics/">Git Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../react-basics/">React Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python-basics/">Python Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../docker-basics/">Docker Basics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">HTML Basics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#common-html-tags">Common HTML Tags</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-div-tag">1. &lt;div&gt; Tag</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-span-tag">2. &lt;span&gt; Tag</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-h1-h2-h3-h4-h5-h6-tags">3. &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt; Tags</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-a-tag">4. &lt;a&gt; Tag</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-p-tag">5. &lt;p&gt; Tag</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-img-tag">6. &lt;img&gt; Tag</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inheriting-styles-with-css">Inheriting Styles with CSS</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../react-basics/">React Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../next-js-basics/">NextJs Basics</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Bloomberg Tech Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Resources</li>
+      <li class="breadcrumb-item active">HTML Basics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="html-basics">HTML Basics</h1>
+<p>This page will go through some basics to HTML that should give a quick start for writing in the markdown language. For more in depth explanation and guides, feel free to do a quick search, or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">read here</a>.</p>
+<h2 id="common-html-tags">Common HTML Tags</h2>
+<p>Below are some common html tags that may be useful in the lab.</p>
+<h3 id="1-div-tag">1. <code>&lt;div&gt;</code> Tag</h3>
+<p>The <code>&lt;div&gt;</code> tag is a block-level element used to group other elements together. It does not inherently have any styling but can be styled using CSS.</p>
+<p>Example:</p>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+    &lt;p&gt;This is a paragraph inside a div.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="2-span-tag">2. <code>&lt;span&gt;</code> Tag</h3>
+<p>The <code>&lt;span&gt;</code> tag is an inline element used to group text or other inline elements. Like <code>&lt;div&gt;</code>, it does not have any default styling and relies on CSS for styling.</p>
+<p>Example:</p>
+<pre><code class="language-html">&lt;p&gt;This is a &lt;span class=&quot;highlight&quot;&gt;highlighted&lt;/span&gt; text.&lt;/p&gt;
+</code></pre>
+<h3 id="3-h1-h2-h3-h4-h5-h6-tags">3. <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code> Tags</h3>
+<p>These tags represent headings, with <code>&lt;h1&gt;</code> being the highest level and <code>&lt;h6&gt;</code> the lowest. They have default styles such as font size and weight, but these can be overridden with CSS.</p>
+<p>Example:</p>
+<pre><code class="language-html">&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;h3&gt;Sub-subheading&lt;/h3&gt;
+</code></pre>
+<h3 id="4-a-tag">4. <code>&lt;a&gt;</code> Tag</h3>
+<p>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another. It can be styled using CSS to change its color, underline, etc. It always requires an <code>href</code> attribute to where it links to, which can be within the page (a header) or another page (within or outside the website). The <code>target</code> attribute can be set to <code>"_blank"</code> to tell the browser to open the link in a new tab.</p>
+<p>Example:</p>
+<pre><code class="language-html">&lt;!-- Outside website example --&gt;
+&lt;a href=&quot;https://www.example.com&quot; target=&quot;_blank&quot;&gt;Visit Example&lt;/a&gt;
+
+&lt;!-- Relative page example --&gt;
+&lt;a href=&quot;/about&quot;&gt;About Page&lt;/a&gt;
+
+&lt;!-- Header example --&gt;
+&lt;a href=&quot;#faq&quot;&gt;See the FAQ section below&lt;/a&gt;
+</code></pre>
+<h3 id="5-p-tag">5. <code>&lt;p&gt;</code> Tag</h3>
+<p>The <code>&lt;p&gt;</code> tag defines a paragraph. It is a block-level element with default margin and padding, which can be customized using CSS.</p>
+<p>Example:</p>
+<pre><code class="language-html">&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+</code></pre>
+<h3 id="6-img-tag">6. <code>&lt;img&gt;</code> Tag</h3>
+<p>The <code>&lt;img&gt;</code> tag is used to embed images in a webpage. It is an inline element and can be styled using CSS to set dimensions, borders, etc. The <code>src</code> attribute is always required to tell where the image should be displayed form, which can come from within the webapp or from a link on some hosted site on the internet. The <code>alt</code> attribute is good to set in case the image is not able to be rendered, alternative text is shown describing the image.</p>
+<p>Example:</p>
+<pre><code class="language-html">&lt;!-- From within the app --&gt;
+&lt;img src=&quot;image.jpg&quot; alt=&quot;Sample Image&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;
+
+&lt;!-- From the internet --&gt;
+&lt;img src=&quot;https://google.com/some-image.png&quot; alt=&quot;Sample Image&quot; width=&quot;200&quot; height=&quot;150&quot;&gt;
+</code></pre>
+<h2 id="inheriting-styles-with-css">Inheriting Styles with CSS</h2>
+<p>HTML elements inherit styles from their parent elements unless explicitly overridden. CSS (Cascading Style Sheets) is used to apply styles to HTML elements. Here is an example of how class names can be used to style components:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;HTML Basics&lt;/title&gt;
+    &lt;!-- This tag below links to the stylesheet, letting the HTML know to read from it. --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1 class=&quot;title&quot;&gt;Welcome to HTML Basics&lt;/h1&gt;
+        &lt;p class=&quot;description&quot;&gt;This is a paragraph explaining the basics of HTML.&lt;/p&gt;
+        &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS&quot; class=&quot;link&quot;&gt;Learn more about CSS&lt;/a&gt;
+        &lt;img src=&quot;image.jpg&quot; alt=&quot;Sample Image&quot; class=&quot;image&quot;&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>More on CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">here</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../docker-basics/" class="btn btn-neutral float-left" title="Docker Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../react-basics/" class="btn btn-neutral float-right" title="React Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../docker-basics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../react-basics/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

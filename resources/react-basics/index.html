@@ -77,7 +77,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#4-state">4. State</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#5-lifecycle-methods">5. Lifecycle Methods</a>
+    <li class="toctree-l3"><a class="reference internal" href="#5-component">5. Component</a>
     </li>
         </ul>
     </li>
@@ -89,11 +89,47 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#use-cases">Use Cases</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#additional-resources">Additional Resources</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../python-basics/">Python Basics</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../docker-basics/">Docker Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../html-basics/">HTML Basics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">React Basics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#core-concepts">Core Concepts</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-components">1. Components</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-jsx">2. JSX</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-props">3. Props</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-state">4. State</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-component">5. Component</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advantages">Advantages</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#basic-project-structure">Basic Project Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-application">Example Application</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#use-cases">Use Cases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#additional-resources">Additional Resources</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../next-js-basics/">NextJs Basics</a>
                   </li>
               </ul>
       </div>
@@ -132,7 +168,7 @@
 <h2 id="core-concepts">Core Concepts</h2>
 <h3 id="1-components">1. Components</h3>
 <p>Components are the building blocks of a React application. They can be:
-- <strong>Functional Components</strong>: Defined as JavaScript functions.
+- <strong>Functional Components (Recommended)</strong>: Defined as JavaScript functions.
 - <strong>Class Components</strong>: Defined as ES6 classes.</p>
 <p>Example of a Functional Component:</p>
 <pre><code class="language-jsx">function Greeting() {
@@ -142,12 +178,36 @@
 export default Greeting;
 </code></pre>
 <h3 id="2-jsx">2. JSX</h3>
-<p>JSX (JavaScript XML) allows you to write HTML-like syntax in JavaScript.</p>
+<p>JSX (JavaScript XML) allows you to write HTML-like syntax in JavaScript. It is typically the return of the functional
+component.</p>
 <p>Example:</p>
-<pre><code class="language-jsx">const element = &lt;h1&gt;Welcome to React!&lt;/h1&gt;;
+<pre><code class="language-jsx">
+function foo(): JSX.Element { // The return type for custom React components is typically JSX
+  const element = &lt;h1&gt;Welcome to React!&lt;/h1&gt;;
+  return element;
+}
 </code></pre>
+<p>It is possible to inject Javascript/dynamic content into JSX using <code>{}</code> as a wrapper.</p>
+<p><strong>NOTE: If/Else statements are not usable in the JSX section, instead use a ternary operator ( bool ? true : false) or</strong>
+<strong>use a callback function to render what you need.</strong></p>
+<p>Examples:</p>
+<pre><code class="language-jsx">// Working example
+import React from 'react';
+
+export default function Counter(props: { count }) {
+  return (
+    &lt;div&gt;
+      {/* Inlined javascript variable count (and comment) */}
+      {props.count &gt; 10 ? &lt;p&gt;Count: {count}&lt;/p&gt; : &lt;p&gt;Max count (10) reached!&lt;p/&gt;}
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Increment&lt;/button&gt; {/* Callback function that adds to the count */}
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>See more at the <a href="https://react.dev/learn/writing-markup-with-jsx">react docs</a>.</p>
 <h3 id="3-props">3. Props</h3>
-<p>Props (short for properties) are used to pass data from parent to child components.</p>
+<p>Props (short for properties), are used to pass data from parent to child components. Props are objects that can contain
+any data you need to pass down.</p>
 <p>Example:</p>
 <pre><code class="language-jsx">function Welcome(props) {
   return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
@@ -173,14 +233,14 @@ function Counter() {
 
 export default Counter;
 </code></pre>
-<h3 id="5-lifecycle-methods">5. Lifecycle Methods</h3>
-<p>Class components use lifecycle methods to manage behavior during mounting, updating, and unmounting phases.</p>
-<p>Key methods:
+<h3 id="5-component">5. Component</h3>
+<p>Components follow a lifecycle to manage behavior at various stages, mainly the mounting, updating, and unmounting phases.</p>
+<p>Key stages:
 * <code>componentDidMount</code>
 * <code>componentDidUpdate</code>
 * <code>componentWillUnmount</code></p>
 <p>Example:</p>
-<pre><code>class App extends React.Component {
+<pre><code class="language-jsx">class App extends React.Component {
   componentDidMount() {
     console.log('Component Mounted');
   }
@@ -190,6 +250,8 @@ export default Counter;
   }
 }
 </code></pre>
+<p>This is now managed via functional components and the use of states and hooks, but understanding the lifecycle is helpful
+to resolve bad rendering and understanding rendering logic.</p>
 <h2 id="advantages">Advantages</h2>
 <ul>
 <li>Reusable Components: Break UI into reusable and modular pieces.</li>
@@ -226,12 +288,18 @@ export default App;
 <li>Interactive UIs: Handle user input and update views in real-time.</li>
 <li>Mobile Development: Extend with React Native for mobile apps.</li>
 </ol>
+<h2 id="additional-resources">Additional Resources</h2>
+<ol>
+<li><a href="https://react.dev/learn">React docs</a></li>
+<li><a href="https://react.dev/learn/writing-markup-with-jsx">Writing HTML with JSX</a></li>
+<li><a href="https://react.dev/reference/react/hooks">React hooks</a></li>
+</ol>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../git-basics/" class="btn btn-neutral float-left" title="Git Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../python-basics/" class="btn btn-neutral float-right" title="Python Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../html-basics/" class="btn btn-neutral float-left" title="HTML Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../next-js-basics/" class="btn btn-neutral float-right" title="NextJs Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -254,10 +322,10 @@ export default App;
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../git-basics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../html-basics/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../python-basics/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../next-js-basics/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
