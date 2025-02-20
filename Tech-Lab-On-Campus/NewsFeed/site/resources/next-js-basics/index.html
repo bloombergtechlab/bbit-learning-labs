@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Overview - Bloomberg Tech Lab</title>
+    <title>NextJs Basics - Bloomberg Tech Lab</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Overview";
-        var mkdocs_page_input_path = "resources/resources.md";
+        var mkdocs_page_name = "NextJs Basics";
+        var mkdocs_page_input_path = "resources/next-js-basics.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -57,9 +57,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Resources</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Overview</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../resources/">Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../redis-basics/">Redis Basics</a>
                   </li>
@@ -75,7 +73,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../react-basics/">React Basics</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../next-js-basics/">NextJs Basics</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">NextJs Basics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-nextjs">What is Next.js?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-nextjs-works">How Next.js Works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#benefits-of-nextjs">Benefits of Next.js</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started-with-nextjs">Getting Started with Next.js</a>
+    </li>
+    </ul>
                   </li>
               </ul>
       </div>
@@ -93,7 +101,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Resources</li>
-      <li class="breadcrumb-item active">Overview</li>
+      <li class="breadcrumb-item active">NextJs Basics</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -102,21 +110,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="instructions-for-creating-resource-documents">Instructions for creating resource documents</h1>
-<p>In this directory, README documents should be created to introduce basic functionality of the technologies that will be used for this tech lab.</p>
-<p>The technologies planned to be used are:<br />
-<em> Python<br />
-</em> JavaScript<br />
-<em> React<br />
-</em> Redis<br />
-* Docker  </p>
-<p>Follow example in https://bbgithub.dev.bloomberg.com/bbit/learning_labs/tree/main/Tech-Lab-On-Campus/Resources. Create a "basics" README for as many technologies as you can cover.</p>
+                <h1 id="nextjs-basics">Next.js Basics</h1>
+<h2 id="what-is-nextjs">What is Next.js?</h2>
+<p>Next.js is a <a href="../react-basics/">React</a> framework that enables several extra features, including server-side rendering and generating static websites. It is built on top of Node.js (a server that uses Javascript to run) and can be used to create web applications with React.</p>
+<h2 id="how-nextjs-works">How Next.js Works</h2>
+<p>Next.js works by allowing developers to create pages in a <code>pages</code> directory. Each file in this directory becomes a route in the application, i.e. the file structure is used as the router for pages in the application. Next.js handles the rendering of these pages on the server side, which can improve performance and SEO.</p>
+<h2 id="benefits-of-nextjs">Benefits of Next.js</h2>
+<ul>
+<li><strong>Server-Side Rendering (SSR):</strong> Improves performance and SEO by rendering pages on the server.</li>
+<li><strong>Static Site Generation (SSG):</strong> Generates static HTML at build time, which can be served quickly.</li>
+<li><strong>API Routes:</strong> Allows you to create API endpoints within the same project.</li>
+<li><strong>Automatic Code Splitting:</strong> Only loads the necessary JavaScript for the page being rendered.</li>
+<li><strong>Built-in CSS and Sass support:</strong> Easily import CSS and Sass files.</li>
+<li><strong>Fast Refresh:</strong> Provides instant feedback on edits made to your React components.</li>
+</ul>
+<h2 id="getting-started-with-nextjs">Getting Started with Next.js</h2>
+<p>To get started with Next.js, follow these steps:</p>
+<ol>
+<li>
+<p><strong>Install Node.js:</strong> Ensure you have Node.js installed on your machine.</p>
+</li>
+<li>
+<p><strong>Create a new Next.js project:</strong>
+    <code>bash
+    npx create-next-app@latest my-next-app
+    cd my-next-app</code></p>
+</li>
+<li>
+<p><strong>Run the development server:</strong>
+    <code>bash
+    npm run dev</code></p>
+</li>
+<li>
+<p><strong>Open your browser:</strong> Navigate to <code>http://localhost:3000</code> to see your new Next.js app.</p>
+</li>
+<li>
+<p><strong>Create a new page:</strong> Add a new file <code>about.js</code> in the <code>pages</code> directory with the following content:
+    <code>javascript
+    // filepath: NewsFeed/pages/about.js
+    export default function About() {
+        return &lt;h1&gt;About Page&lt;/h1&gt;;
+    }</code></p>
+</li>
+<li>
+<p><strong>Visit the new page:</strong> Open <code>http://localhost:3000/about</code> in your browser to see the new page.</p>
+</li>
+</ol>
+<p>For more information on how Next works, visit the <a href="https://nextjs.org/docs/pages/building-your-application">official docs</a>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../api-question-prompt/" class="btn btn-neutral float-left" title="Interview Question Prompt"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../redis-basics/" class="btn btn-neutral float-right" title="Redis Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../react-basics/" class="btn btn-neutral float-left" title="React Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -139,10 +184,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../api-question-prompt/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../react-basics/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../redis-basics/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

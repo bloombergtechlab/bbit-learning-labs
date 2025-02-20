@@ -83,6 +83,12 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../resources/docker-basics/">Docker Basics</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resources/html-basics/">HTML Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resources/react-basics/">React Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resources/next-js-basics/">NextJs Basics</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -108,7 +114,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="create-frontend-of-news-feed-website">Create Frontend of News Feed Website</h2>
-<p>You are tasked with populating the frontend of a news feed webpage which is going to display news articles. You will populate a <em>Featured News</em> section as well as a <em>News Feed</em> Section. You will take advantage of reusable components in React (read more <a href="https://www.freecodecamp.org/news/how-to-build-reusable-react-components/">here</a>). After that, you will connect the frontend to the backend in order to get data from the api your backend partner built.</p>
+<p>You are tasked with populating the frontend of a news feed webpage which is going to display news articles. You will populate a <em>Featured News</em> section as well as a <em>News Feed</em> Section. You will take advantage of reusable components in <a href="https://react.dev/learn">React</a>. After that, you will connect the frontend to the backend in order to get data from the api your backend partner built.</p>
 <h3 id="hints">Hints</h3>
 <ul>
 <li><strong>Hint 1:</strong> Some classes included in <code>frontend/src/styles/globals.css</code> may help with styling.</li>
@@ -121,23 +127,24 @@
 <li>It should use the props to display:<ol>
 <li>The featured article's title</li>
 <li>The featured article's image</li>
-<li>A portion of the selected article's body, truncated so that it fits nicely in the section
-Once completing Part 1, Once completing this part, you should be able to see the Featured News Article at the top of the page.</li>
+<li>A portion of the selected article's body, truncated so that it fits nicely in the section</li>
 </ol>
 </li>
 </ul>
+<p>Once completing Part 1, Once completing this part, you should be able to see the Featured News Article at the top of the page.
+For more information on how to create a component, refer to the <a href="../resources/react-basics/">react basics</a> docs.</p>
 <h3 id="part-2-create-a-reusable-news-card-to-use-with-general-stories">Part 2 : Create a reusable news card to use with general stories</h3>
 <p>In <code>frontend/src/components/NewsCard.tsx</code> implement a reusable news card component to use with the news feed articles (articles that aren't the featured story)</p>
 <ul>
 <li>The <code>NewsCard</code> component should have these properties:<ol>
 <li>The article's title</li>
 <li>The article's image</li>
-<li>A truncated version of the article's body
-This component should be reusable so that it can be used to populate all stories on the news page.
-Once completing Part 2, you should be able to see a few test articles on the right side of the screen.</li>
+<li>A truncated version of the article's body</li>
 </ol>
 </li>
 </ul>
+<p>This component should be reusable so that it can be used to populate all stories on the news page.
+Once completing Part 2, you should be able to see a few test articles on the right side of the screen.</p>
 <h3 id="part-3-populate-a-news-feed-with-the-given-articles">Part 3 : Populate a news feed with the given <code>articles</code></h3>
 <p>In <code>frontend/src/components/NewsFeed.tsx</code> populate a news feed using the given articles</p>
 <ul>
@@ -149,9 +156,9 @@ Once completing Part 3, you should be able to see a grid of news articles at the
 <ul>
 <li>Fetch the featured article from <code>/api/news/get-featured-article</code></li>
 <li>Fetch the news feed data from <code>/api/news/get-newsfeed</code></li>
-<li>Use the <code>set</code> functions defined above to update the <code>articles</code> and <code>featuredArticle</code> variables
-Once completing Part 4, you should be able to see news articles different from the dummy data originally provided.</li>
+<li>Use the <code>set</code> functions defined above to update the <code>articles</code> and <code>featuredArticle</code> variables</li>
 </ul>
+<p>Once completing Part 4, you should be able to see news articles different from the dummy data originally provided.</p>
 <h3 id="stretch-goals">Stretch Goals</h3>
 <p>You now have a news feed up and running connected to a backend service! You can follow up with some of the following optimizations if interested.</p>
 <ol>
