@@ -68,6 +68,8 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#run-the-website">Run the Website</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#issues-with-docker">Issues with Docker</a>
+    </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a>
@@ -176,19 +178,18 @@
 <p>To get started with the project, follow these steps:</p>
 <h4 id="fork-and-clone-the-project-repository">Fork and Clone the Project Repository</h4>
 <ol>
-<li>Fork the project repository: https://github.com/bloomberg/bbit-learning-labs</li>
+<li>Fork the project repository</li>
 <li>Clone the forked repo into your working directory, and navigate to it:</li>
 </ol>
 <pre><code class="language-sh">git clone https://github.com/YOUR-USERNAME/bbit-learning-labs.git
-cd bbit-learning-labs/Tech-Lab-On-Campus/NewsFeed
+cd Tech-Lab-On-Campus/NewsFeed
 </code></pre>
 <h4 id="open-the-development-container">Open the Development Container</h4>
 <ol>
 <li>Open VSCode</li>
 <li>Install the <code>Dev Containers</code> extension <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">here</a>. If you already have it installed, continue to the next step.</li>
-<li>Open the <code>bbit-learning-labs/Tech-Lab-On-Campus/NewsFeed</code> folder through VS Code</li>
-<li>Open up the Command Palette in VSCode by either Ctrl+Shift+P (Windows) or Cmd+Shift+P (Mac) and type Dev Containers.</li>
-<li>Click on Dev Containers: Reopen in Container</li>
+<li>Open up the Command Palette in VSCode by either <code>Ctrl+Shift+P</code> (Windows) or <code>Cmd+Shift+P</code> (Mac) and type <code>Dev Containers</code>.</li>
+<li>Click on <code>Dev Containers: Reopen in Container</code></li>
 <li>VSCode will start downloading some docker images and install the necessary python and npm packages</li>
 </ol>
 <h4 id="run-the-website">Run the Website</h4>
@@ -199,6 +200,20 @@ cd bbit-learning-labs/Tech-Lab-On-Campus/NewsFeed
 <li>In the terminal, run <code>make run-frontend</code> to run the frontend</li>
 </ol>
 <p>✨ You should now be ready to develop! ✨</p>
+<h4 id="issues-with-docker">Issues with Docker</h4>
+<p>If you are encountering issues with docker, you can use Github codespaces instead:</p>
+<ol>
+<li>Fork the repo</li>
+<li>Navigate to the forked repo</li>
+<li>Click on the green <code>&lt; &gt; Code</code> button</li>
+<li>Select the Codespaces tab and click on the <code>+</code> button</li>
+<li>In codespaces, open a new terminal and run <code>cd Tech-Lab-On-Campus/NewsFeed/</code></li>
+<li>run <code>make install</code></li>
+<li>run <code>make redis-in-docker</code></li>
+<li>run <code>make run-backend</code></li>
+<li>Open up a new terminal and run <code>make run-frontend</code></li>
+<li>A pop up should appear saying that port 3000 is in use. Click on <code>Open in Browser</code>. If not, the link can be opened from the terminal window</li>
+</ol>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://reactjs.org/docs/getting-started.html">React Documentation</a></li>
@@ -255,5 +270,5 @@ cd bbit-learning-labs/Tech-Lab-On-Campus/NewsFeed
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-02-20 23:28:28.075983+00:00
+Build Date UTC : 2025-03-04 15:59:54.457558+00:00
 -->
