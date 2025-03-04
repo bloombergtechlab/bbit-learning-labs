@@ -54,21 +54,20 @@ To get started with the project, follow these steps:
 
 #### Fork and Clone the Project Repository
 
-1. Fork the project repository: https://github.com/bloomberg/bbit-learning-labs
+1. Fork the project repository
 2. Clone the forked repo into your working directory, and navigate to it:
 ``` sh
 git clone https://github.com/YOUR-USERNAME/bbit-learning-labs.git
-cd bbit-learning-labs/Tech-Lab-On-Campus/NewsFeed
+cd Tech-Lab-On-Campus/NewsFeed
 ```
 
 #### Open the Development Container
 
 1. Open VSCode
 2. Install the `Dev Containers` extension [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). If you already have it installed, continue to the next step.
-3. Open the `bbit-learning-labs/Tech-Lab-On-Campus/NewsFeed` folder through VS Code
-4. Open up the Command Palette in VSCode by either Ctrl+Shift+P (Windows) or Cmd+Shift+P (Mac) and type Dev Containers.
-5. Click on Dev Containers: Reopen in Container
-6. VSCode will start downloading some docker images and install the necessary python and npm packages
+3. Open up the Command Palette in VSCode by either `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (Mac) and type `Dev Containers`.
+4. Click on `Dev Containers: Reopen in Container`
+5. VSCode will start downloading some docker images and install the necessary python and npm packages
 
 #### Run the Website
 
@@ -78,6 +77,21 @@ cd bbit-learning-labs/Tech-Lab-On-Campus/NewsFeed
 4. In the terminal, run `make run-frontend` to run the frontend
 
 ✨ You should now be ready to develop! ✨
+
+#### Issues with Docker
+If you are encountering issues with docker, you can use Github codespaces instead:
+
+1. Fork the repo
+2. Navigate to the forked repo
+3. Click on the green `< > Code` button
+4. Select the Codespaces tab and click on the `+` button
+5. In codespaces, open a new terminal and run `cd Tech-Lab-On-Campus/NewsFeed/`
+6. run `make install`
+7. run `make redis-in-docker`
+8. run `make run-backend`
+9. Open up a new terminal and run `make run-frontend`
+10. A pop up should appear saying that port 3000 is in use. Click on `Open in Browser`. If not, the link can be opened from the terminal window
+
 
 ## Resources
 
