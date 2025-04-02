@@ -71,7 +71,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Resources</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../resources/resources/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../resources/overview/">Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../resources/redis-basics/">Redis Basics</a>
                   </li>
@@ -111,15 +111,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="create-frontend-of-news-feed-website">Create Frontend of News Feed Website</h2>
+                <h1 id="create-frontend-of-news-feed-website">Create Frontend of News Feed Website</h1>
 <p>You are tasked with populating the frontend of a news feed webpage which is going to display news articles. You will populate a <em>Featured News</em> section as well as a <em>News Feed</em> Section. You will take advantage of reusable components in <a href="https://react.dev/learn">React</a>. After that, you will connect the frontend to the backend in order to get data from the api your backend partner built.</p>
-<h3 id="hints">Hints</h3>
+<h2 id="hints">Hints</h2>
 <ul>
 <li><strong>Hint 1:</strong> Some classes included in <code>frontend/src/styles/globals.css</code> may help with styling.</li>
 <li><strong>Hint 2:</strong> <a href="(https://www.geeksforgeeks.org/typescript-array-map-method/)">Array.map()</a> may be useful.</li>
 <li><strong>Hint 3:</strong> This <a href="https://medium.com/@bhanu.mt.1501/api-calls-in-react-js-342a09d5315f">Medium blog</a> may be useful to figure how to fetch data.</li>
+<li><strong>Hint 4:</strong> The relevant resources can be found from <a href="../resources/overview/">resources</a>.</li>
 </ul>
-<h3 id="part-1-display-a-featured-news-article">Part 1 : Display a Featured News Article</h3>
+<h2 id="part-1-display-a-featured-news-article">Part 1 : Display a Featured News Article</h2>
 <p>In <code>frontend/src/components/FeaturedNews.tsx</code> implement the component that will display the featured news article.</p>
 <ul>
 <li>It should use the props to display:<ol>
@@ -131,7 +132,7 @@
 </ul>
 <p>Once completing Part 1, Once completing this part, you should be able to see the Featured News Article at the top of the page.
 For more information on how to create a component, refer to the <a href="../resources/react-basics/">react basics</a> docs.</p>
-<h3 id="part-2-create-a-reusable-news-card-to-use-with-general-stories">Part 2 : Create a reusable news card to use with general stories</h3>
+<h2 id="part-2-create-a-reusable-news-card-to-use-with-general-stories">Part 2 : Create a reusable news card to use with general stories</h2>
 <p>In <code>frontend/src/components/NewsCard.tsx</code> implement a reusable news card component to use with the news feed articles (articles that aren't the featured story)</p>
 <ul>
 <li>The <code>NewsCard</code> component should have these properties:<ol>
@@ -143,13 +144,13 @@ For more information on how to create a component, refer to the <a href="../reso
 </ul>
 <p>This component should be reusable so that it can be used to populate all stories on the news page.
 Once completing Part 2, you should be able to see a few test articles on the right side of the screen.</p>
-<h3 id="part-3-populate-a-news-feed-with-the-given-articles">Part 3 : Populate a news feed with the given <code>articles</code></h3>
+<h2 id="part-3-populate-a-news-feed-with-the-given-articles">Part 3 : Populate a news feed with the given <code>articles</code></h2>
 <p>In <code>frontend/src/components/NewsFeed.tsx</code> populate a news feed using the given articles</p>
 <ul>
 <li>Use the reusable News Card Component created in Part 2 to create the articles in the new feeds
 Once completing Part 3, you should be able to see a grid of news articles at the bottom of the page under the Featured News Article Section.</li>
 </ul>
-<h3 id="part-4-api-integration">Part 4 : API Integration</h3>
+<h2 id="part-4-api-integration">Part 4 : API Integration</h2>
 <p>In <code>frontend/src/pages/news.tsx</code> fetch article data from the API call. The Featured Article Data and the News Feed Data should both come from the API</p>
 <ul>
 <li>Fetch the featured article from <code>/api/news/get-featured-article</code></li>
@@ -157,13 +158,13 @@ Once completing Part 3, you should be able to see a grid of news articles at the
 <li>Use the <code>set</code> functions defined above to update the <code>articles</code> and <code>featuredArticle</code> variables</li>
 </ul>
 <p>Once completing Part 4, you should be able to see news articles different from the dummy data originally provided.</p>
-<h3 id="stretch-goals">Stretch Goals</h3>
+<h2 id="stretch-goals">Stretch Goals</h2>
 <p>You now have a news feed up and running connected to a backend service! You can follow up with some of the following optimizations if interested.</p>
-<ol>
+<ul>
 <li><strong>Responsiveness:</strong> a website typically adjusts itself to fit the screen it is being displayed on in order to make it most presentable to the end user. Play around with the layout and responsive properties to find the best experience.</li>
 <li><strong>Styling:</strong> this is a pretty plain website that we have so far. Are there any styling properties or elements you can add to make it look more like a news website? Look at <a href="https://www.bloomberg.com">Bloomberg News</a> for inspo!</li>
 <li><strong><a href="https://github.com/marketplace/actions/deploy-to-heroku">Deploy to Heroku</a>:</strong> You have a full website now, which you can deploy to heroku to use as part of your portfolio!</li>
-</ol>
+</ul>
               
             </div>
           </div><footer>

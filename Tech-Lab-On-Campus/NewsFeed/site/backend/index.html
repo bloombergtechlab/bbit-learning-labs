@@ -67,7 +67,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Resources</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../resources/resources/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../resources/overview/">Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../resources/redis-basics/">Redis Basics</a>
                   </li>
@@ -107,28 +107,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="create-backend-of-news-feed-website">Create Backend of News Feed Website</h2>
+                <h1 id="create-backend-of-news-feed-website">Create Backend of News Feed Website</h1>
 <p>You are tasked to get news articles from Redis Cache. You will be implementing two functions in order to display them on the News Feed Website. Do not worry about reading in the data from Redis; this is done for you in <code>backend/app/utils/redis.py</code>.</p>
-<h3 id="hints">Hints:</h3>
+<h2 id="hints">Hints:</h2>
 <ul>
-<li><strong>Hint 1:</strong> There is only one function from <code>backend/app/utils/redis.py</code> you will need to fetch articules. </li>
-<li><strong>Hint 2:</strong> In order to get the articles, look at how the data is written into Redis in <code>backend/app/__init__.py</code>. </li>
+<li><strong>Hint 1:</strong> There is only one function from <code>backend/app/utils/redis.py</code> you will need to fetch articles. It can return any object you store in redis and take any shape you like.</li>
+<li><strong>Hint 2:</strong> In order to get the articles, look at how the data is written into Redis in <code>backend/app/__init__.py</code>.</li>
+<li><strong>Hint 3</strong>: You can test the backend / API changes without the frontend code! Run <code>localhost:8000/{endpoint}</code>.</li>
+<li><strong>Hint 4:</strong> The relevant resources can be found from <a href="../resources/overview/">resources</a>.</li>
 </ul>
-<h3 id="part-1-write-a-function-to-format-data">Part 1: Write a function to Format Data</h3>
-<p>In <code>backend/app/newsfeed.py</code>, implement a private method that can format the data into an article object. Check a json file in <code>backend/app/resources/dataset/news</code> to retrieve necessary information to create an article object. </p>
-<h3 id="part-2-retrieve-all-news-articles">Part 2: Retrieve all News Articles</h3>
+<h2 id="part-1-write-a-function-to-format-data">Part 1: Write a function to Format Data</h2>
+<p>In <code>backend/app/newsfeed.py</code>, implement a private method that can format the data into an article object. Check a json file in <code>backend/app/resources/dataset/news</code> to retrieve necessary information to create an article object.</p>
+<h2 id="part-2-retrieve-all-news-articles">Part 2: Retrieve all News Articles</h2>
 <p>In <code>backend/app/newsfeed.py</code>, implement the <code>get_all_news</code> method. You should:</p>
 <ul>
 <li>Figure out how you can retrieve the data from Redis</li>
-<li>Format the data into Articles </li>
-<li>Return the data as a list of articles. </li>
+<li>Format the data into Articles</li>
+<li>Return the data as a list of articles.</li>
 </ul>
-<h3 id="part-3-retrieve-featured-news">Part 3: Retrieve Featured News</h3>
+<p>Once you finish <code>get_all_news</code>, implement <code>get_newsfeed</code> function in the <code>backend/app/__init__.py</code> for the API. You should be able to utilize the function you implemented above.</p>
+<h2 id="part-3-retrieve-featured-news">Part 3: Retrieve Featured News</h2>
 <p>In <code>backend/app/newsfeed.py</code>, implement the <code>get_featured_news</code> method. You should:</p>
 <ul>
 <li>Get all the articles</li>
-<li>Sort the articles by most recent published date and return the list </li>
+<li>Sort the articles by most recent published date and return the list</li>
 </ul>
+<p>Once you finish <code>get_featured_news</code>, implement <code>get_featured_article</code> function in the <code>backend/app/__init__.py</code> for the API. You should be able to utilize the function you implemented above.</p>
               
             </div>
           </div><footer>
